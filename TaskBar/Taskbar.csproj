@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA0C00CB-8699-4F37-BFAE-40CA87ACC06E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Taskbar</RootNamespace>
+    <AssemblyName>Taskbar</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CustomMarshalers" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ShellEnums.cs" />
+    <Compile Include="Common\ShellException.cs" />
+    <Compile Include="Common\ShellFile.cs" />
+    <Compile Include="Common\ShellFileSystemFolder.cs" />
+    <Compile Include="Common\ShellFolder.cs" />
+    <Compile Include="Common\ShellFolderItems.cs" />
+    <Compile Include="Common\ShellHelper.cs" />
+    <Compile Include="Common\ShellItemArray.cs" />
+    <Compile Include="Common\ShellLibrary.cs" />
+    <Compile Include="Common\ShellLink.cs" />
+    <Compile Include="Common\ShellObject.cs" />
+    <Compile Include="Common\ShellObjectContainer.cs" />
+    <Compile Include="Common\ShellObjectFactory.cs" />
+    <Compile Include="Core\Interop\CoreErrorHelper.cs" />
+    <Compile Include="Core\Interop\CoreHelpers.cs" />
+    <Compile Include="Core\Interop\CoreNativeMethods.cs" />
+    <Compile Include="Core\Interop\Dialogs\DialogShowState.cs" />
+    <Compile Include="Core\Interop\TaskDialogs\EnableThemingInScope.cs" />
+    <Compile Include="Core\Interop\TaskDialogs\NativeTaskDialog.cs" />
+    <Compile Include="Core\Interop\TaskDialogs\NativeTaskDialogSettings.cs" />
+    <Compile Include="Core\Interop\TaskDialogs\TaskDialogNativeMethods.cs" />
+    <Compile Include="Core\Interop\WindowMessage.cs" />
+    <Compile Include="Core\PropertySystem\PropertyKey.cs" />
+    <Compile Include="Core\PropertySystem\PropertySystemCOMInterfaces.cs" />
+    <Compile Include="Core\PropertySystem\PropertySystemNativeMethods.cs" />
+    <Compile Include="Core\PropertySystem\PropVariant.cs" />
+    <Compile Include="Core\PropertySystem\PropVariantNativeMethods.cs" />
+    <Compile Include="Core\SafeHandles\SafeIconHandle.cs" />
+    <Compile Include="Core\SafeHandles\SafeRegionHandle.cs" />
+    <Compile Include="Core\SafeHandles\SafeWindowHandle.cs" />
+    <Compile Include="Core\SafeHandles\ZeroInvalidHandle.cs" />
+    <Compile Include="Core\TaskDialogResult.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Interop\Common\IntPtrExtensions.cs" />
+    <Compile Include="Interop\Common\ShellCOMClasses.cs" />
+    <Compile Include="Interop\Common\ShellNativeStructs.cs" />
+    <Compile Include="Interop\Common\WindowUtilities.cs" />
+    <Compile Include="Interop\HandlerNativeMethods.cs" />
+    <Compile Include="Interop\KnownFolders\KnownFoldersCOMGuids.cs" />
+    <Compile Include="Interop\KnownFolders\KnownFoldersCOMInterfaces.cs" />
+    <Compile Include="Interop\KnownFolders\KnownFoldersNativeMethods.cs" />
+    <Compile Include="Interop\TaskbarCOMInterfaces.cs" />
+    <Compile Include="Resources\LocalizedMessages.Designer.cs" />
+    <Compile Include="Taskbar\JumpListCustomCategoryCollection.cs" />
+    <Compile Include="Taskbar\JumpListItemCollection.cs" />
+    <Compile Include="Taskbar\JumpListLink.cs" />
+    <Compile Include="Taskbar\JumpListSeparator.cs" />
+    <Compile Include="Taskbar\TabbedThumbnailClosedEventArgs.cs" />
+    <Compile Include="Taskbar\TabbedThumbnailClosingEventArgs.cs" />
+    <Compile Include="Taskbar\TabbedThumbnailScreenCapture.cs" />
+    <Compile Include="Taskbar\TabbedThumbnailManager.cs" />
+    <Compile Include="Taskbar\TabbedThumbnailBitmapRequestedEventArgs.cs" />
+    <Compile Include="Taskbar\TabbedThumbnailEventArgs.cs" />
+    <Compile Include="Taskbar\TabbedThumbnail.cs" />
+    <Compile Include="Taskbar\TabbedThumbnailProxyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taskbar\TaskbarEnums.cs" />
+    <Compile Include="Interop\Taskbar\TaskbarNativeMethods.cs" />
+    <Compile Include="Interop\Dialogs\DialogsCOMClasses.cs" />
+    <Compile Include="Interop\Common\ShellCOMGuids.cs" />
+    <Compile Include="Interop\Common\ShellNativeMethods.cs" />
+    <Compile Include="Interop\Common\ShellCOMInterfaces.cs" />
+    <Compile Include="Interop\Dialogs\DialogsCOMInterfaces.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Taskbar\JumpListCustomCategory.cs" />
+    <Compile Include="Taskbar\JumpList.cs" />
+    <Compile Include="Taskbar\JumpListItem.cs" />
+    <Compile Include="Taskbar\TaskbarList.cs" />
+    <Compile Include="Taskbar\TaskbarManager.cs">
+    </Compile>
+    <Compile Include="Taskbar\TaskbarInterfaces.cs" />
+    <Compile Include="Taskbar\TaskbarWindow.cs" />
+    <Compile Include="Taskbar\TaskbarWindowManager.cs" />
+    <Compile Include="Taskbar\ThumbnailButton.cs" />
+    <Compile Include="Taskbar\ThumbnailButtonClickedEventArgs.cs" />
+    <Compile Include="Taskbar\ThumbnailToolbarManager.cs" />
+    <Compile Include="Taskbar\ThumbnailToolbarProxyWindow.cs" />
+    <Compile Include="Taskbar\UserRemovedJumpListItemsEventArg.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LocalizedMessages.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

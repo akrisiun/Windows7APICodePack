@@ -52,7 +52,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
             // Create the right type of ShellObject based on the above information 
 
             // 1. First check if this is a Shell Link
-            if (itemType == ".LNK")
+            if (itemType == ".lnk")
             {
                 return new ShellLink(nativeShellItem2);
             }
@@ -60,15 +60,15 @@ namespace Microsoft.WindowsAPICodePack.Shell
             else if (isFolder)
             {
                 // 3. If this is a folder, check for types: Shell Library, Shell Folder or Search Container
-                if (itemType == ".LIBRARY-MS" && (shellLibrary = ShellLibrary.FromShellItem(nativeShellItem2, true)) != null)
+                if (itemType == ".library-ms" && (shellLibrary = ShellLibrary.FromShellItem(nativeShellItem2, true)) != null)
                 {
                     return shellLibrary; // we already created this above while checking for Library
                 }
-                else if (itemType == ".SEARCHCONNECTOR-MS")
+                else if (itemType == ".searchconnector-ms")
                 {
                     return new ShellSearchConnector(nativeShellItem2);
                 }
-                else if (itemType == ".SEARCH-MS")
+                else if (itemType == ".search-ms")
                 {
                     return new ShellSavedSearchCollection(nativeShellItem2);
                 }
